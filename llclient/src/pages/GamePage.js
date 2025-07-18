@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box, Grid, Typography, Paper, Divider, LinearProgress, Fade, Button, Tooltip } from '@mui/material';
 import BalanceDisplay from '../components/BalanceDisplay';
 import DiceDisplay from '../components/DiceDisplay';
-import RollButton from '../components/RollButton';
 import ResultMessage from '../components/ResultMessage';
 import { useAppContext } from '../context/AppContext';
 

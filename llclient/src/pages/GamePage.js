@@ -98,6 +98,19 @@ const GamePage = () => {
             <Typography variant="h3" sx={{ color: 'accent.main', fontFamily: 'Cinzel, serif', mb: 1, letterSpacing: 3, textShadow: '0 0 32px #bfa14a, 0 0 8px #8a0037' }}>
               Lucky Dice
             </Typography>
+            <Typography variant="h4" sx={{
+              color: '#FFD700',
+              fontFamily: 'Cinzel, serif',
+              mb: 2,
+              textAlign: 'center',
+              letterSpacing: 2,
+              textShadow: '0 0 16px #FFD700, 0 0 4px #bfa14a, 0 0 1px #000',
+              fontWeight: 800,
+              fontSize: { xs: 22, sm: 26, md: 30 },
+              lineHeight: 1.1,
+            }}>
+              Balance
+            </Typography>
             <BalanceDisplay balance={state.balance} />
             <Box sx={{ width: '100%', mt: 1, mb: 1 }}>
               <Typography variant="subtitle1" sx={{ color: 'primary.main', fontFamily: 'Cinzel, serif', mb: 1, letterSpacing: 1, textAlign: 'center', fontSize: 20 }}>
@@ -116,9 +129,28 @@ const GamePage = () => {
                   },
                 }}
               />
-              <Typography variant="caption" sx={{ color: 'accent.main', fontFamily: 'Cinzel, serif', display: 'block', textAlign: 'center', mt: 0.5, fontSize: 16, letterSpacing: 1 }}>
-                Lucky Meter
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mt: 2, mb: 1 }}>
+                <Typography
+                  variant="h4"
+                  sx={{
+                    color: 'transparent',
+                    background: 'linear-gradient(90deg, #FFD700 30%, #bfa14a 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    fontFamily: 'Cinzel, serif',
+                    fontWeight: 900,
+                    fontSize: { xs: 26, sm: 30, md: 36 },
+                    letterSpacing: 2,
+                    textShadow: '0 0 24px #FFD700, 0 0 8px #bfa14a, 0 0 2px #000',
+                    lineHeight: 1.1,
+                    mb: 0,
+                    mr: 1,
+                  }}
+                >
+                  Lucky Meter
+                </Typography>
+                <span style={{ fontSize: 32, filter: 'drop-shadow(0 0 8px #FFD700)' }} role="img" aria-label="sparkle">✨</span>
+              </Box>
             </Box>
             {lastWin && (
               <Fade in={!!lastWin} timeout={600}>
@@ -221,18 +253,31 @@ const GamePage = () => {
             <Divider sx={{ width: '100%', my: 3, borderColor: '#222' }} />
             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
               <Paper elevation={0} sx={{
-                bgcolor: 'rgba(24,24,32,0.85)',
+                bgcolor: 'rgba(10,10,10,0.98)',
                 borderRadius: 4,
-                p: 3,
-                boxShadow: '0 0 24px 4px #4b006e',
+                p: 4,
+                boxShadow: '0 0 32px 8px #bfa14a',
                 width: '100%',
-                maxWidth: 360,
-                border: '1.5px solid #4b006e',
-                backdropFilter: 'blur(4px)',
+                maxWidth: 400,
+                border: '2.5px solid #bfa14a',
+                backdropFilter: 'blur(2px)',
+                mt: 2,
               }}>
-                <Typography variant="h6" sx={{ color: 'accent.main', fontFamily: 'Cinzel, serif', mb: 1, textAlign: 'center', letterSpacing: 1 }}>Game Rules</Typography>
-                <ul style={{ color: '#e0e0e0', fontFamily: 'EB Garamond, serif', fontSize: 18, margin: 0, paddingLeft: 24 }}>
-                  {GAME_RULES.map((rule, i) => <li key={i} style={{ marginBottom: 8 }}>{rule}</li>)}
+                <Typography variant="h3" sx={{
+                  color: '#FFD700',
+                  fontFamily: 'Cinzel, serif',
+                  mb: 3,
+                  textAlign: 'center',
+                  letterSpacing: 3,
+                  textShadow: '0 0 24px #FFD700, 0 0 8px #bfa14a, 0 0 2px #000',
+                  fontWeight: 900,
+                  fontSize: { xs: 32, sm: 38, md: 44 },
+                  lineHeight: 1.1,
+                }}>
+                  Game Rules
+                </Typography>
+                <ul style={{ color: '#ffe082', fontFamily: 'Cinzel, serif', fontSize: 20, margin: 0, paddingLeft: 28, fontWeight: 700, letterSpacing: 1 }}>
+                  {GAME_RULES.map((rule, i) => <li key={i} style={{ marginBottom: 14, lineHeight: 1.5 }}>{rule}</li>)}
                 </ul>
               </Paper>
             </Box>
@@ -250,7 +295,17 @@ const GamePage = () => {
             border: '1.5px solid #bfa14a',
             backdropFilter: 'blur(6px)',
           }}>
-            <Typography variant="h5" sx={{ color: 'accent.main', fontFamily: 'Cinzel, serif', mb: 2, letterSpacing: 1, textAlign: 'center', textShadow: '0 0 16px #bfa14a' }}>
+            <Typography variant="h3" sx={{
+              color: '#FFD700',
+              fontFamily: 'Cinzel, serif',
+              mb: 3,
+              textAlign: 'center',
+              letterSpacing: 3,
+              textShadow: '0 0 24px #FFD700, 0 0 8px #bfa14a, 0 0 2px #000',
+              fontWeight: 900,
+              fontSize: { xs: 32, sm: 38, md: 44 },
+              lineHeight: 1.1,
+            }}>
               Game History
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', minHeight: 48, justifyContent: 'center' }}>
